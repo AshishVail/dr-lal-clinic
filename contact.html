@@ -1,75 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Appointment | Dr. Lal Dental Clinic</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Dr. Lal Multi-Speciality Dental & Implant Clinic in Shahdara, Delhi. Call, email or request a dental appointment through WhatsApp.">
+  <meta name="author" content="Dr. Lal Multi-Speciality Dental & Implant Clinic">
+  <meta name="theme-color" content="#063f43">
+  <title>Contact & Appointments | Dr. Lal Dental Clinic</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Dr. Lal <span>Dental</span></a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary">Book Appointment</a>
-        </div>
-    </nav>
-
-    <div class="page-header">
-        <div class="container">
-            <h1>Contact Us & Book Appointment</h1>
-            <p>Get in Touch with Dr. Lal Multi-Speciality Dental & Implant Clinic</p>
-        </div>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Advanced dental care in Shahdara, Delhi</span>
+      <div class="topbar-right">
+        <a href="mailto:drlal.dc@gmail.com">drlal.dc@gmail.com</a>
+        <a href="tel:+919999622100">+91 99996 22100</a>
+      </div>
     </div>
+  </div>
 
-    <section class="contact-section">
-        <div class="container grid-2">
-            <div class="glass-card page-card">
-                <h2>Direct Contact Info</h2>
-                <p><strong>Address:</strong> 1/2299, Main Mandoli Rd, near Ravidas Gate, DDA Market, Ram Nagar, Shahdara, Delhi, 110032</p>
-                <p><strong>Phone:</strong> <a href="tel:+919999622100">+91 99996 22100</a></p>
-                <p><strong>Email:</strong> <a href="mailto:drlal.dc@gmail.com">drlal.dc@gmail.com</a></p>
-                <p><strong>Timing:</strong> Monday - Saturday: 10:00 AM - 8:30 PM</p>
-                
-                <div class="action-buttons" style="margin-top:2rem;">
-                    <a href="tel:+919999622100" class="btn btn-primary">Call Directly</a>
-                    <a href="https://wa.me/919999622100" class="btn btn-secondary">WhatsApp Chat</a>
-                </div>
-            </div>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+        <span class="brand-icon">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M24 6c-5.2 0-8.3 3.2-12.2 3.2C7.4 9.2 4 13 4 18.3c0 6.8 4.3 10.2 5.4 16.2C10.7 41 14 44 18 40.6c2.8-2.4 2.4-7.8 6-7.8s3.2 5.4 6 7.8c4 3.4 7.3.4 8.6-6.1C39.7 28.5 44 25.1 44 18.3 44 13 40.6 9.2 36.2 9.2 32.3 9.2 29.2 6 24 6Z"/>
+            <path d="M24 13v14M17 20h14"/>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>Dr. Lal Dental</strong>
+          <small>Multi-Speciality & Implant Clinic</small>
+        </span>
+      </a>
 
-            <div class="glass-card page-card">
-                <h2>Book Your Consultation</h2>
-                <form class="appointment-form" onsubmit="event.preventDefault(); alert('Appointment request submitted successfully!');">
-                    <input type="text" placeholder="Full Name" required class="input-field">
-                    <input type="tel" placeholder="Phone Number" required class="input-field">
-                    <input type="date" required class="input-field">
-                    <select class="input-field">
-                        <option>Dental Implants</option>
-                        <option>Root Canal Treatment</option>
-                        <option>Cosmetic Dentistry / Whitening</option>
-                        <option>General Checkup</option>
-                    </select>
-                    <button type="submit" class="btn btn-primary" style="width:100%;">Submit Request</button>
-                </form>
-            </div>
-        </div>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </div>
+
+      <a href="#appointment" class="button button-primary nav-appointment">
+        Book Appointment <span>→</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero contact-hero">
+      <div class="page-hero-pattern"></div>
+      <div class="container page-hero-content reveal">
+        <span class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Contact the clinic
+        </span>
+        <h1>Let's plan your <span>next visit.</span></h1>
+        <p>
+          Call directly, send an email or use the appointment form to start a
+          WhatsApp conversation with the clinic.
+        </p>
+      </div>
     </section>
 
-    <a href="https://wa.me/919999622100" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-        <svg viewBox="0 0 32 32" width="32" height="32" fill="#fff"><path d="M16 2A13 13 0 0 0 4.69 20.85L2 29l8.35-2.6A13 13 0 1 0 16 2zm0 23.8a10.74 10.74 0 0 1-5.48-1.5l-.39-.23-4.94 1.54 1.55-4.82-.26-.41A10.79 10.79 0 1 1 16 25.8z"/></svg>
-    </a>
+    <section id="appointment" class="section appointment-section">
+      <div class="container appointment-grid">
+        <div class="appointment-form-card glass-card reveal">
+          <div class="form-heading">
+            <span class="section-kicker">Appointment request</span>
+            <h2>Tell us what you need.</h2>
+            <p>
+              Your request will open WhatsApp with the details you provide.
+              The clinic can then confirm availability and the appointment.
+            </p>
+          </div>
 
-    <footer>
-        <div class="container text-center">
-            <p>© 2026 Dr. Lal Dental Clinic. All Rights Reserved.</p>
+          <form id="appointmentForm" class="appointment-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Full name <span>*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
+                <small class="field-error"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="phone">Phone number <span>*</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91 99999 99999" required>
+                <small class="field-error"></small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="service">Treatment</label>
+                <select id="service" name="service">
+                  <option value="General Dentistry">General Dentistry</option>
+                  <option value="Dental Implants">Dental Implants</option>
+                  <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                  <option value="Preventive & Hygiene Care">Preventive & Hygiene Care</option>
+                  <option value="Restorative Dentistry">Restorative Dentistry</option>
+                  <option value="I am not sure">I am not sure</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="date">Preferred date</label>
+                <input id="date" name="date" type="date">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Briefly tell us what you would like help with"></textarea>
+            </div>
+
+            <button class="button button-primary button-large form-submit" type="submit">
+              Send Request on WhatsApp
+              <span>↗</span>
+            </button>
+
+            <p class="form-note">
+              By submitting, you are opening WhatsApp to contact the clinic.
+            </p>
+
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          </form>
         </div>
-    </footer>
-    <script src="js/app.js"></script>
+
+        <div class="contact-side">
+          <div class="contact-info-card glass-card reveal">
+            <span class="section-kicker">Direct contact</span>
+            <h2>Prefer to talk?</h2>
+
+            <a href="tel:+919999622100" class="contact-method">
+              <span class="contact-method-icon">☎</span>
+              <span>
+                <small>Call the clinic</small>
+                <strong>+91 99996 22100</strong>
+              </span>
+              <span class="contact-method-arrow">→</span>
+            </a>
+
+            <a href="https://wa.me/919999622100" target="_blank" rel="noopener noreferrer" class="contact-method">
+              <span class="contact-method-icon whatsapp-icon">☘</span>
+              <span>
+                <small>WhatsApp</small>
+                <strong>Chat directly</strong>
+              </span>
+              <span class="contact-method-arrow">↗</span>
+            </a>
+
+            <a href="mailto:drlal.dc@gmail.com" class="contact-method">
+              <span class="contact-method-icon">✉</span>
+              <span>
+                <small>Email</small>
+                <strong>drlal.dc@gmail.com</strong>
+              </span>
+              <span class="contact-method-arrow">→</span>
+            </a>
+          </div>
+
+          <div class="hours-card glass-card reveal">
+            <div class="hours-top">
+              <span class="section-kicker">Location</span>
+              <span class="location-status"><i></i> Shahdara</span>
+            </div>
+
+            <h3>Find the clinic</h3>
+
+            <div class="address-box">
+              <span class="address-icon">⌖</span>
+              <p>
+                1/2299, Main Mandoli Rd, near Ravidas Gate,
+                DDA Market, Ram Nagar, Shahdara, Delhi, 110032
+              </p>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Dr+Lal+Multi+Speciality+Dental+Implant+Clinic+Shahdara+Delhi"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-light full-width"
+            >
+              Open Google Maps <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section location-section contact-location">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-kicker">Clinic location</span>
+            <h2>Come visit us in <span>Shahdara.</span></h2>
+          </div>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Dr+Lal+Multi+Speciality+Dental+Implant+Clinic+Shahdara+Delhi"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-light"
+          >
+            Get Directions ↗
+          </a>
+        </div>
+
+        <div class="map-container map-large reveal">
+          <iframe
+            title="Dr. Lal Multi-Speciality Dental & Implant Clinic map"
+            src="https://www.google.com/maps?q=1%2F2299%20Main%20Mandoli%20Rd%2C%20near%20Ravidas%20Gate%2C%20DDA%20Market%2C%20Ram%20Nagar%2C%20Shahdara%2C%20Delhi%20110032&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-small reassurance-section">
+      <div class="container reassurance-grid">
+        <div class="reassurance-card reveal">
+          <span>01</span>
+          <strong>Easy to reach</strong>
+          <p>Located near Ravidas Gate in DDA Market, Ram Nagar.</p>
+        </div>
+        <div class="reassurance-card reveal">
+          <span>02</span>
+          <strong>Direct communication</strong>
+          <p>Call, email or WhatsApp the clinic without unnecessary steps.</p>
+        </div>
+        <div class="reassurance-card reveal">
+          <span>03</span>
+          <strong>Consultation first</strong>
+          <p>Discuss your concerns before deciding on treatment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-box reveal">
+        <div>
+          <span class="section-kicker">Need immediate assistance?</span>
+          <h2>Call the clinic directly.</h2>
+          <p>For appointments and clinic-related questions, contact the team.</p>
+        </div>
+
+        <div class="cta-actions">
+          <a href="tel:+919999622100" class="button button-white">☎ +91 99996 22100</a>
+          <a href="https://wa.me/919999622100" target="_blank" rel="noopener noreferrer" class="button button-whatsapp">WhatsApp ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="floating-actions">
+    <a href="tel:+919999622100" class="floating-phone" aria-label="Call clinic">☎</a>
+    <a href="https://wa.me/919999622100" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="WhatsApp clinic">☘</a>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand footer-brand-link">
+          <span class="brand-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M24 6c-5.2 0-8.3 3.2-12.2 3.2C7.4 9.2 4 13 4 18.3c0 6.8 4.3 10.2 5.4 16.2C10.7 41 14 44 18 40.6c2.8-2.4 2.4-7.8 6-7.8s3.2 5.4 6 7.8c4 3.4 7.3.4 8.6-6.1C39.7 28.5 44 25.1 44 18.3 44 13 40.6 9.2 36.2 9.2 32.3 9.2 29.2 6 24 6Z"/>
+              <path d="M24 13v14M17 20h14"/>
+            </svg>
+          </span>
+          <span class="brand-copy">
+            <strong>Dr. Lal Dental</strong>
+            <small>Multi-Speciality & Implant Clinic</small>
+          </span>
+        </a>
+        <p>Patient-focused dental care with a modern, comfortable approach in Shahdara, Delhi.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Clinic</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Appointments</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <a href="tel:+919999622100">+91 99996 22100</a>
+        <a href="mailto:drlal.dc@gmail.com">drlal.dc@gmail.com</a>
+        <span>1/2299, Main Mandoli Rd, near Ravidas Gate, DDA Market, Ram Nagar, Shahdara, Delhi 110032</span>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="currentYear">2026</span> Dr. Lal Multi-Speciality Dental & Implant Clinic.</span>
+      <span>Dental care with clarity & care.</span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
