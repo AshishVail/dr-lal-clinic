@@ -1,503 +1,1162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dr. Lal Multi-Speciality Dental & Implant Clinic in Shahdara, Delhi. Patient-focused dental, implant, cosmetic and restorative care.">
-  <meta name="keywords" content="dentist Shahdara, dental clinic Shahdara, dental implants Delhi, cosmetic dentistry Delhi, Dr Lal Dental Clinic">
-  <meta name="author" content="Dr. Lal Multi-Speciality Dental & Implant Clinic">
-  <meta name="theme-color" content="#063f43">
-  <title>Dr. Lal Multi-Speciality Dental & Implant Clinic | Shahdara Delhi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Lal Multi-Speciality Dental & Implant Clinic in Shahdara, Delhi. Advanced dental implants, root canal treatment, cosmetic dentistry and comprehensive dental care.">
+    <meta name="keywords" content="dentist Shahdara Delhi, dental clinic Shahdara, dental implants Delhi, root canal Shahdara, cosmetic dentistry Delhi, Dr Lal Dental Clinic">
+    <meta name="author" content="Dr. Lal Multi-Speciality Dental & Implant Clinic">
+    <meta name="theme-color" content="#073f3b">
+    <title>Dr. Lal Multi-Speciality Dental & Implant Clinic | Shahdara, Delhi</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        :root {
+            --premium-teal: #073f3b;
+            --premium-emerald: #0c6b60;
+            --premium-mint: #c9eee5;
+            --premium-gold: #c9a45c;
+            --premium-cream: #f7faf8;
+            --premium-white: #ffffff;
+            --premium-text: #153432;
+            --premium-muted: #617674;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at 90% 8%, rgba(201, 238, 229, 0.48), transparent 28%),
+                linear-gradient(180deg, #fbfdfc 0%, #f4f9f7 100%);
+            color: var(--premium-text);
+            font-family: "DM Sans", sans-serif;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin-inline: auto;
+        }
+
+        .site-header {
+            position: relative;
+            z-index: 1000;
+        }
+
+        .hero {
+            position: relative;
+            padding: 54px 0 30px;
+            min-height: 680px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 480px;
+            height: 480px;
+            right: -180px;
+            top: 20px;
+            border-radius: 50%;
+            background: rgba(157, 224, 211, 0.28);
+            filter: blur(8px);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.72fr);
+            gap: 54px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 13px;
+            border: 1px solid rgba(12, 107, 96, 0.16);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.62);
+            color: var(--premium-emerald);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(14px);
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #21a98f;
+            box-shadow: 0 0 0 5px rgba(33, 169, 143, 0.1);
+        }
+
+        .hero h1 {
+            max-width: 760px;
+            margin: 20px 0 18px;
+            color: var(--premium-teal);
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(42px, 5.3vw, 72px);
+            line-height: 1.03;
+            letter-spacing: -0.055em;
+        }
+
+        .hero h1 span {
+            color: var(--premium-emerald);
+        }
+
+        .hero-copy {
+            max-width: 650px;
+            margin: 0 0 30px;
+            color: var(--premium-muted);
+            font-size: 18px;
+            line-height: 1.75;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .premium-btn {
+            display: inline-flex;
+            min-height: 52px;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 0 20px;
+            border: 1px solid transparent;
+            border-radius: 15px;
+            font-weight: 800;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+        }
+
+        .premium-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .premium-btn.primary {
+            background: var(--premium-teal);
+            color: #fff;
+            box-shadow: 0 14px 30px rgba(7, 63, 59, 0.2);
+        }
+
+        .premium-btn.secondary {
+            background: rgba(255, 255, 255, 0.72);
+            border-color: rgba(7, 63, 59, 0.13);
+            color: var(--premium-teal);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 27px;
+            color: #55706d;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .hero-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .hero-meta svg {
+            color: var(--premium-emerald);
+        }
+
+        .appointment-card {
+            position: relative;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            border-radius: 28px;
+            background:
+                linear-gradient(145deg, rgba(255,255,255,0.88), rgba(235,248,244,0.66));
+            box-shadow:
+                0 25px 60px rgba(7, 63, 59, 0.13),
+                inset 0 1px 0 rgba(255,255,255,0.9);
+            backdrop-filter: blur(22px);
+            overflow: hidden;
+        }
+
+        .appointment-card::before {
+            content: "";
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            top: -90px;
+            right: -70px;
+            border-radius: 50%;
+            background: rgba(42, 169, 143, 0.16);
+        }
+
+        .doctor-showcase {
+            position: relative;
+            min-height: 172px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 21px;
+            background:
+                linear-gradient(135deg, rgba(7,63,59,0.98), rgba(13,103,93,0.9));
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .doctor-showcase::after {
+            content: "";
+            position: absolute;
+            right: -30px;
+            bottom: -70px;
+            width: 180px;
+            height: 180px;
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 50%;
+        }
+
+        .doctor-label {
+            position: relative;
+            z-index: 2;
+            display: inline-flex;
+            padding: 7px 10px;
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            color: #c8eee7;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .doctor-showcase h2 {
+            position: relative;
+            z-index: 2;
+            margin: 17px 0 7px;
+            font-family: "Manrope", sans-serif;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+        .doctor-showcase p {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            color: #c6dcd9;
+            font-size: 13px;
+        }
+
+        .doctor-symbol {
+            position: absolute;
+            z-index: 1;
+            right: 22px;
+            top: 30px;
+            width: 92px;
+            height: 92px;
+            opacity: 0.17;
+        }
+
+        .appointment-card h3 {
+            margin: 0 0 6px;
+            color: var(--premium-teal);
+            font-family: "Manrope", sans-serif;
+            font-size: 22px;
+        }
+
+        .appointment-card > p {
+            margin: 0 0 17px;
+            color: var(--premium-muted);
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .appointment-form {
+            display: grid;
+            gap: 11px;
+        }
+
+        .appointment-form input,
+        .appointment-form select {
+            width: 100%;
+            height: 47px;
+            padding: 0 14px;
+            border: 1px solid rgba(7,63,59,0.12);
+            border-radius: 12px;
+            outline: none;
+            background: rgba(255,255,255,0.74);
+            color: var(--premium-text);
+            font: inherit;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .appointment-form input:focus,
+        .appointment-form select:focus {
+            border-color: rgba(12,107,96,0.55);
+            box-shadow: 0 0 0 4px rgba(12,107,96,0.08);
+        }
+
+        .appointment-form button {
+            min-height: 49px;
+            border: 0;
+            border-radius: 12px;
+            background: var(--premium-emerald);
+            color: #fff;
+            font: inherit;
+            font-weight: 800;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .appointment-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(12,107,96,0.18);
+        }
+
+        .empanelment {
+            position: relative;
+            z-index: 5;
+            margin: 8px auto 42px;
+        }
+
+        .empanelment-card {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.05fr 2fr;
+            gap: 22px;
+            align-items: center;
+            padding: 22px 25px;
+            border: 1px solid rgba(255,255,255,0.82);
+            border-radius: 22px;
+            background:
+                linear-gradient(110deg, rgba(255,255,255,0.82), rgba(219,243,237,0.6));
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.08),
+                0 0 45px rgba(45, 181, 157, 0.08),
+                inset 0 1px 0 rgba(255,255,255,0.95);
+            backdrop-filter: blur(18px);
+        }
+
+        .empanelment-heading {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+        }
+
+        .empanelment-icon {
+            display: grid;
+            width: 43px;
+            height: 43px;
+            place-items: center;
+            border-radius: 13px;
+            background: var(--premium-teal);
+            color: #fff;
+            box-shadow: 0 10px 24px rgba(7,63,59,0.18);
+        }
+
+        .empanelment-heading strong {
+            display: block;
+            color: var(--premium-teal);
+            font-family: "Manrope", sans-serif;
+            font-size: 16px;
+        }
+
+        .empanelment-heading small {
+            display: block;
+            margin-top: 3px;
+            color: var(--premium-muted);
+            font-size: 11px;
+        }
+
+        .empanelment-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 9px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .empanelment-list li {
+            padding: 9px 12px;
+            border: 1px solid rgba(12,107,96,0.12);
+            border-radius: 999px;
+            background: rgba(255,255,255,0.7);
+            color: var(--premium-teal);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 0.04em;
+        }
+
+        .section {
+            padding: 76px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 35px;
+        }
+
+        .section-heading .kicker {
+            color: var(--premium-emerald);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            margin: 10px 0 11px;
+            color: var(--premium-teal);
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(30px, 4vw, 46px);
+            line-height: 1.12;
+            letter-spacing: -0.04em;
+        }
+
+        .section-heading p {
+            margin: 0;
+            color: var(--premium-muted);
+            line-height: 1.7;
+        }
+
+        .counter-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 82px;
+        }
+
+        .counter-card {
+            position: relative;
+            padding: 24px 20px;
+            border: 1px solid rgba(45,181,157,0.15);
+            border-radius: 20px;
+            background: rgba(255,255,255,0.67);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            backdrop-filter: blur(16px);
+            overflow: hidden;
+        }
+
+        .counter-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(45,181,157,0.08);
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
+        .counter-number {
+            color: var(--premium-teal);
+            font-family: "Manrope", sans-serif;
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+
+        .counter-label {
+            margin-top: 4px;
+            color: var(--premium-muted);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .treatments-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .treatment-card {
+            position: relative;
+            min-height: 355px;
+            border: 1px solid rgba(255,255,255,0.9);
+            border-radius: 24px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .treatment-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 22px 45px rgba(7,63,59,0.13);
+        }
+
+        .treatment-image {
+            position: relative;
+            height: 190px;
+            overflow: hidden;
+            background: #e7f2ef;
+        }
+
+        .treatment-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.45s ease;
+        }
+
+        .treatment-card:hover .treatment-image img {
+            transform: scale(1.04);
+        }
+
+        .treatment-content {
+            padding: 20px;
+        }
+
+        .treatment-content h3 {
+            margin: 0 0 8px;
+            color: var(--premium-teal);
+            font-family: "Manrope", sans-serif;
+            font-size: 20px;
+        }
+
+        .treatment-content p {
+            margin: 0;
+            color: var(--premium-muted);
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+        .treatment-link {
+            display: inline-flex;
+            margin-top: 15px;
+            color: var(--premium-emerald);
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        .location-layout {
+            display: grid;
+            grid-template-columns: 0.78fr 1.22fr;
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .location-card {
+            padding: 32px;
+            border-radius: 25px;
+            background: linear-gradient(145deg, var(--premium-teal), #0b5e56);
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .location-card .kicker {
+            color: #a9e0d5;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .location-card h2 {
+            margin: 12px 0 15px;
+            font-family: "Manrope", sans-serif;
+            font-size: 30px;
+            line-height: 1.18;
+        }
+
+        .location-card p {
+            color: #c8dfdc;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .location-details {
+            display: grid;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .location-detail {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 13px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 14px;
+            background: rgba(255,255,255,0.06);
+        }
+
+        .location-detail svg {
+            flex: 0 0 auto;
+            margin-top: 2px;
+            color: #9ce0d4;
+        }
+
+        .location-detail span {
+            color: #e0eeec;
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+        .map-container {
+            width: 100%;
+            max-width: 100%;
+            height: 350px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            background: #dce9e6;
+        }
+
+        .map-container iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .floating-actions {
+            position: fixed;
+            z-index: 1200;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .floating-action {
+            display: grid;
+            width: 52px;
+            height: 52px;
+            place-items: center;
+            border: 1px solid rgba(255,255,255,0.75);
+            border-radius: 50%;
+            background: rgba(255,255,255,0.84);
+            color: var(--premium-teal);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+            backdrop-filter: blur(16px);
+            transition: transform 0.2s ease;
+        }
+
+        .floating-action:hover {
+            transform: translateY(-4px);
+        }
+
+        .floating-action.whatsapp {
+            background: #159b76;
+            color: #fff;
+        }
+
+        @media (max-width: 950px) {
+            .hero-grid,
+            .location-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 38px;
+            }
+
+            .appointment-card {
+                max-width: 650px;
+            }
+
+            .empanelment-card {
+                grid-template-columns: 1fr;
+            }
+
+            .empanelment-list {
+                justify-content: flex-start;
+            }
+
+            .counter-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .treatments-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 620px) {
+            .container {
+                width: min(100% - 28px, 1180px);
+            }
+
+            .hero {
+                padding: 25px 0 20px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-copy {
+                font-size: 15px;
+            }
+
+            .hero-actions {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .premium-btn {
+                width: 100%;
+            }
+
+            .empanelment-card {
+                padding: 18px;
+            }
+
+            .empanelment-list {
+                gap: 7px;
+            }
+
+            .empanelment-list li {
+                font-size: 10px;
+                padding: 8px 9px;
+            }
+
+            .counter-grid,
+            .treatments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .counter-card {
+                padding: 19px;
+            }
+
+            .section {
+                padding: 55px 0;
+            }
+
+            .location-card {
+                padding: 23px;
+            }
+
+            .map-container {
+                height: 350px;
+                border-radius: 16px;
+            }
+
+            .floating-actions {
+                right: 13px;
+                bottom: 13px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span>Advanced dental care in Shahdara, Delhi</span>
-      <div class="topbar-right">
-        <a href="mailto:drlal.dc@gmail.com">drlal.dc@gmail.com</a>
-        <a href="tel:+919999622100">+91 99996 22100</a>
-      </div>
-    </div>
-  </div>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary navigation">
+            <div class="container">
+                <a href="index.html" class="brand" aria-label="Dr. Lal Multi-Speciality Dental & Implant Clinic home">
+                    <span class="brand-mark" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M8.2 5.2C6.1 6.4 5.1 8.9 5.5 11.3L7.2 21c.3 1.8 1.8 3.1 3.6 3.1 1.4 0 2.7-.9 3.2-2.2L14 19.1l.7 2.8c.5 1.3 1.8 2.2 3.2 2.2 1.8 0 3.3-1.3 3.6-3.1l1.7-9.7c.4-2.4-.6-4.9-2.7-6.1-2.2-1.3-4.3-.5-6.5.5-2.2-1-4.3-1.8-5.8-.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                            <path d="M14 10.3v5.2M11.4 12.9h5.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <span>
+                        <strong>Dr. Lal</strong>
+                        <small>Multi-Speciality Dental & Implant Clinic</small>
+                    </span>
+                </a>
 
-  <header class="site-header">
-    <nav class="navbar container" aria-label="Main navigation">
-      <a href="index.html" class="brand" aria-label="Dr. Lal Dental Clinic home">
-        <span class="brand-icon">
-          <svg viewBox="0 0 48 48" aria-hidden="true">
-            <path d="M24 6c-5.2 0-8.3 3.2-12.2 3.2C7.4 9.2 4 13 4 18.3c0 6.8 4.3 10.2 5.4 16.2C10.7 41 14 44 18 40.6c2.8-2.4 2.4-7.8 6-7.8s3.2 5.4 6 7.8c4 3.4 7.3.4 8.6-6.1C39.7 28.5 44 25.1 44 18.3 44 13 40.6 9.2 36.2 9.2 32.3 9.2 29.2 6 24 6Z"/>
-            <path d="M24 13v14M17 20h14"/>
-          </svg>
-        </span>
-        <span class="brand-copy">
-          <strong>Dr. Lal Dental</strong>
-          <small>Multi-Speciality & Implant Clinic</small>
-        </span>
-      </a>
+                <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <div class="nav-menu">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </div>
-
-      <a href="contact.html" class="button button-primary nav-appointment">
-        Book Appointment
-        <span>→</span>
-      </a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero-section">
-      <div class="hero-glow hero-glow-one"></div>
-      <div class="hero-glow hero-glow-two"></div>
-
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <span class="eyebrow">
-            <span class="eyebrow-dot"></span>
-            Patient-first dental care
-          </span>
-
-          <h1>
-            A healthier smile,
-            <span>beautifully cared for.</span>
-          </h1>
-
-          <p class="hero-description">
-            Modern multi-speciality dental and implant care designed around comfort,
-            clarity and confident treatment decisions.
-          </p>
-
-          <div class="hero-actions">
-            <a href="contact.html" class="button button-primary button-large">
-              Book an Appointment
-              <span>→</span>
-            </a>
-
-            <a href="tel:+919999622100" class="button button-glass button-large">
-              <span class="button-icon">☎</span>
-              +91 99996 22100
-            </a>
-          </div>
-
-          <div class="hero-trust">
-            <div class="trust-avatars">
-              <span>DL</span>
-              <span>+</span>
-              <span>♥</span>
+                <div class="nav-menu">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="contact.html#appointment" class="nav-cta">Book Appointment</a>
+                </div>
             </div>
-            <div>
-              <strong>Care that starts with listening</strong>
-              <span>Consultation-led dental treatment</span>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div>
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot" aria-hidden="true"></span>
+                        Advanced Dental Care · Shahdara, Delhi
+                    </div>
+
+                    <h1 id="hero-title">
+                        A healthier smile,
+                        <span>beautifully cared for.</span>
+                    </h1>
+
+                    <p class="hero-copy">
+                        Experience comprehensive dental care with a modern, patient-first approach at Dr. Lal Multi-Speciality Dental & Implant Clinic.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="contact.html#appointment" class="premium-btn primary">
+                            Book an Appointment
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="tel:+919999622100" class="premium-btn secondary">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M5 4h4l2 5-2.5 1.5a14 14 0 0 0 5 5L15 13l5 2v4c0 1.1-.9 2-2 2C10.3 21 3 13.7 3 5c0-1.1.9-2 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                            </svg>
+                            +91 99996 22100
+                        </a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            Multi-speciality care
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 3l2.8 5.7L21 9.6l-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            </svg>
+                            Patient-focused experience
+                        </span>
+                    </div>
+                </div>
+
+                <aside class="appointment-card" aria-labelledby="quick-appointment-title">
+                    <div class="doctor-showcase">
+                        <span class="doctor-label">Clinical Excellence</span>
+                        <h2>Confident care.<br>Comfortable visits.</h2>
+                        <p>Modern dentistry designed around your needs.</p>
+
+                        <svg class="doctor-symbol" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+                            <circle cx="50" cy="50" r="43" stroke="white" stroke-width="2"/>
+                            <path d="M31 39c0-8 5-14 12-14 3.5 0 5.8 1.3 7 3.2 1.2-1.9 3.5-3.2 7-3.2 7 0 12 6 12 14v12c0 10-5.8 22-19 22S31 61 31 51V39Z" stroke="white" stroke-width="2"/>
+                            <path d="M50 35v25M37.5 47.5h25" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
+
+                    <h3 id="quick-appointment-title">Quick Appointment</h3>
+                    <p>Share your details and our clinic team can help you plan your visit.</p>
+
+                    <form class="appointment-form" action="contact.html#appointment" method="get">
+                        <label class="sr-only" for="quick-name">Your name</label>
+                        <input id="quick-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+
+                        <label class="sr-only" for="quick-phone">Phone number</label>
+                        <input id="quick-phone" name="phone" type="tel" placeholder="Mobile number" autocomplete="tel" inputmode="tel" pattern="[0-9+\-\s]{10,}" required>
+
+                        <label class="sr-only" for="quick-service">Treatment</label>
+                        <select id="quick-service" name="service">
+                            <option value="">Select treatment</option>
+                            <option value="dental-implants">Dental Implants</option>
+                            <option value="root-canal">Root Canal Treatment</option>
+                            <option value="cosmetic-dentistry">Cosmetic Dentistry</option>
+                            <option value="general-dentistry">General Dentistry</option>
+                            <option value="other">Other Consultation</option>
+                        </select>
+
+                        <button type="submit">Request Appointment</button>
+                    </form>
+                </aside>
             </div>
-          </div>
-        </div>
+        </section>
 
-        <div class="hero-visual reveal">
-          <div class="hero-visual-main">
-            <div class="hero-visual-orb"></div>
+        <section class="empanelment" aria-label="Government and institutional empanelment">
+            <div class="container">
+                <div class="empanelment-card">
+                    <div class="empanelment-heading">
+                        <span class="empanelment-icon" aria-hidden="true">
+                            <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 20h16M6 20V9l6-4 6 4v11M9 12h6M9 16h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <strong>Government & Institutional Empanelment</strong>
+                            <small>Serving eligible patients through recognised panels</small>
+                        </span>
+                    </div>
 
-            <svg class="hero-tooth" viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg" aria-label="Dental care illustration">
-              <defs>
-                <linearGradient id="toothGradient" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#ffffff"/>
-                  <stop offset="100%" stop-color="#d9f4ef"/>
-                </linearGradient>
-                <filter id="toothShadow" x="-30%" y="-30%" width="160%" height="160%">
-                  <feDropShadow dx="0" dy="20" stdDeviation="15" flood-color="#001f22" flood-opacity=".25"/>
-                </filter>
-              </defs>
-              <path
-                d="M89 44C58 50 37 75 40 109c3 34 22 52 29 80 8 32 11 79 37 88 22 8 29-32 44-49 6-7 14-7 20 0 15 17 22 57 44 49 26-9 29-56 37-88 7-28 26-46 29-80 3-34-18-59-49-65-23-5-39 11-61 11S112 39 89 44Z"
-                fill="url(#toothGradient)"
-                stroke="#9edbd1"
-                stroke-width="6"
-                filter="url(#toothShadow)"
-              />
-              <path d="M95 138c30 23 80 23 110 0" fill="none" stroke="#0a8c7d" stroke-width="9" stroke-linecap="round"/>
-              <circle cx="106" cy="113" r="7" fill="#063f43"/>
-              <circle cx="194" cy="113" r="7" fill="#063f43"/>
-              <path d="M139 170c7 5 15 5 22 0" fill="none" stroke="#13a889" stroke-width="6" stroke-linecap="round"/>
+                    <ul class="empanelment-list">
+                        <li>CGHS</li>
+                        <li>DGHS</li>
+                        <li>MCD</li>
+                        <li>DDA</li>
+                        <li>CBSE</li>
+                        <li>Empaneled Clinic</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="clinic-highlights" aria-labelledby="highlights-title">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="kicker">Why patients choose us</span>
+                    <h2 id="highlights-title">Experience built around trust and precision.</h2>
+                    <p>
+                        From routine dental care to advanced restorative and cosmetic procedures, our clinic brings together a comprehensive approach to oral health.
+                    </p>
+                </div>
+
+                <div class="counter-grid" aria-label="Clinic statistics">
+                    <article class="counter-card">
+                        <div class="counter-number" data-counter="15" data-suffix="+">0</div>
+                        <div class="counter-label">Years of Experience</div>
+                    </article>
+
+                    <article class="counter-card">
+                        <div class="counter-number" data-counter="15000" data-suffix="+">0</div>
+                        <div class="counter-label">Happy Patients</div>
+                    </article>
+
+                    <article class="counter-card">
+                        <div class="counter-number" data-counter="20" data-suffix="+">0</div>
+                        <div class="counter-label">Dental Treatments</div>
+                    </article>
+
+                    <article class="counter-card">
+                        <div class="counter-number" data-counter="100" data-suffix="%">0</div>
+                        <div class="counter-label">Patient-Centred Care</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="treatments" aria-labelledby="treatments-title">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="kicker">Featured treatments</span>
+                    <h2 id="treatments-title">Advanced care for every kind of smile.</h2>
+                    <p>
+                        Explore selected treatments designed to restore function, improve comfort and help you feel confident about your smile.
+                    </p>
+                </div>
+
+                <div class="treatments-grid">
+                    <article class="treatment-card">
+                        <div class="treatment-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85"
+                                alt="Dental professional providing modern dental treatment"
+                                loading="lazy"
+                                width="1200"
+                                height="800"
+                                onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 500%22%3E%3Crect width=%22800%22 height=%22500%22 fill=%22%23e6f3ef%22/%3E%3Cpath d=%22M400 120c-65 0-112 44-112 105 0 63 28 157 67 157 25 0 23-52 45-52s20 52 45 52c39 0 67-94 67-157 0-61-47-105-112-105Z%22 fill=%22%230c6b60%22/%3E%3Cpath d=%22M400 155v150M325 230h150%22 stroke=%22white%22 stroke-width=%2218%22 stroke-linecap=%22round%22/%3E%3C/svg%3E';"
+                            >
+                        </div>
+                        <div class="treatment-content">
+                            <h3>Dental Implants</h3>
+                            <p>Modern tooth replacement solutions designed to restore chewing function and create a natural-looking smile.</p>
+                            <a href="services.html#implants" class="treatment-link">Explore treatment →</a>
+                        </div>
+                    </article>
+
+                    <article class="treatment-card">
+                        <div class="treatment-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=85"
+                                alt="Modern dental examination and root canal care"
+                                loading="lazy"
+                                width="1200"
+                                height="800"
+                                onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 500%22%3E%3Crect width=%22800%22 height=%22500%22 fill=%22%23e6f3ef%22/%3E%3Ccircle cx=%22400%22 cy=%22250%22 r=%22128%22 fill=%22white%22 stroke=%22%23073f3b%22 stroke-width=%2218%22/%3E%3Cpath d=%22M400 145v210M295 250h210%22 stroke=%22%230c6b60%22 stroke-width=%2218%22 stroke-linecap=%22round%22/%3E%3C/svg%3E';"
+                            >
+                        </div>
+                        <div class="treatment-content">
+                            <h3>Root Canal Treatment</h3>
+                            <p>Carefully planned endodontic treatment focused on saving natural teeth and relieving dental discomfort.</p>
+                            <a href="services.html#root-canal" class="treatment-link">Explore treatment →</a>
+                        </div>
+                    </article>
+
+                    <article class="treatment-card">
+                        <div class="treatment-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=1200&q=85"
+                                alt="Professional healthcare consultation representing cosmetic dental care"
+                                loading="lazy"
+                                width="1200"
+                                height="800"
+                                onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 500%22%3E%3Crect width=%22800%22 height=%22500%22 fill=%22%23e6f3ef%22/%3E%3Cpath d=%22M255 290c45 48 245 48 290 0%22 stroke=%22%230c6b60%22 stroke-width=%2224%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M290 285c30 35 190 35 220 0%22 stroke=%22white%22 stroke-width=%2218%22 stroke-linecap=%22round%22/%3E%3Ccircle cx=%22320%22 cy=%22220%22 r=%2212%22 fill=%22%23073f3b%22/%3E%3Ccircle cx=%22480%22 cy=%22220%22 r=%2212%22 fill=%22%23073f3b%22/%3E%3C/svg%3E';"
+                            >
+                        </div>
+                        <div class="treatment-content">
+                            <h3>Cosmetic Dentistry</h3>
+                            <p>Smile-enhancing treatments focused on aesthetics, proportion and a naturally confident appearance.</p>
+                            <a href="services.html#cosmetic" class="treatment-link">Explore treatment →</a>
+                        </div>
+                    </article>
+
+                    <article class="treatment-card">
+                        <div class="treatment-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1200&q=85"
+                                alt="Professional dental instruments and treatment environment"
+                                loading="lazy"
+                                width="1200"
+                                height="800"
+                                onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 500%22%3E%3Crect width=%22800%22 height=%22500%22 fill=%22%23e6f3ef%22/%3E%3Cpath d=%22M270 160h260M300 160v190h200V160M350 215h100M350 260h100%22 stroke=%22%23073f3b%22 stroke-width=%2218%22 stroke-linecap=%22round%22/%3E%3C/svg%3E';"
+                            >
+                        </div>
+                        <div class="treatment-content">
+                            <h3>General Dentistry</h3>
+                            <p>Preventive examinations, cleaning, fillings and everyday oral healthcare for long-term dental wellness.</p>
+                            <a href="services.html#general" class="treatment-link">Explore treatment →</a>
+                        </div>
+                    </article>
+
+                    <article class="treatment-card">
+                        <div class="treatment-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=1200&q=85"
+                                alt="Dental care professional working with modern equipment"
+                                loading="lazy"
+                                width="1200"
+                                height="800"
+                                onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 500%22%3E%3Crect width=%22800%22 height=%22500%22 fill=%22%23e6f3ef%22/%3E%3Ccircle cx=%22400%22 cy=%22250%22 r=%22115%22 fill=%22white%22 stroke=%22%230c6b60%22 stroke-width=%2216%22/%3E%3Cpath d=%22M345 250h110M400 195v110%22 stroke=%22%230c6b60%22 stroke-width=%2216%22 stroke-linecap=%22round%22/%3E%3C/svg%3E';"
+                            >
+                        </div>
+                        <div class="treatment-content">
+                            <h3>Preventive Care</h3>
+                            <p>Regular dental assessments and preventive care to identify problems early and maintain a healthy smile.</p>
+                            <a href="services.html#preventive" class="treatment-link">Explore treatment →</a>
+                        </div>
+                    </article>
+
+                    <article class="treatment-card">
+                        <div class="treatment-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1606265752439-1f18756aa2a3?auto=format&fit=crop&w=1200&q=85"
+                                alt="Dental consultation in a modern clinic"
+                                loading="lazy"
+                                width="1200"
+                                height="800"
+                                onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 500%22%3E%3Crect width=%22800%22 height=%22500%22 fill=%22%23e6f3ef%22/%3E%3Cpath d=%22M285 300c55-85 175-85 230 0%22 stroke=%22%23073f3b%22 stroke-width=%2218%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M335 275c20 20 110 20 130 0%22 stroke=%22%230c6b60%22 stroke-width=%2214%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3C/svg%3E';"
+                            >
+                        </div>
+                        <div class="treatment-content">
+                            <h3>Restorative Dentistry</h3>
+                            <p>Thoughtful restorative solutions to rebuild damaged teeth while supporting function and appearance.</p>
+                            <a href="services.html#restorative" class="treatment-link">Explore treatment →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="location" aria-labelledby="location-title">
+            <div class="container">
+                <div class="location-layout">
+                    <div class="location-card">
+                        <span class="kicker">Visit the clinic</span>
+                        <h2 id="location-title">Conveniently located in Shahdara.</h2>
+                        <p>
+                            Find us at DDA Market near Ravidas Gate on Main Mandoli Road, Ram Nagar, Shahdara, Delhi.
+                        </p>
+
+                        <div class="location-details">
+                            <a class="location-detail" href="https://www.google.com/maps/search/?api=1&query=Dr.+Lal+Multi-Speciality+Dental+%26+Implant+Clinic+1%2F2299+Main+Mandoli+Rd+Delhi+110032" target="_blank" rel="noopener noreferrer">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="1.7"/>
+                                    <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+                                </svg>
+                                <span>1/2299, Main Mandoli Rd, near Ravidas Gate, DDA Market, Ram Nagar, Shahdara, Delhi 110032</span>
+                            </a>
+
+                            <a class="location-detail" href="tel:+919999622100">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M5 4h4l2 5-2.5 1.5a14 14 0 0 0 5 5L15 13l5 2v4c0 1.1-.9 2-2 2C10.3 21 3 13.7 3 5c0-1.1.9-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                                </svg>
+                                <span>+91 99996 22100</span>
+                            </a>
+
+                            <a class="location-detail" href="mailto:drlal.dc@gmail.com">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/>
+                                    <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7"/>
+                                </svg>
+                                <span>drlal.dc@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="map-container" aria-label="Google Maps location of Dr. Lal Multi-Speciality Dental & Implant Clinic">
+                        <iframe
+                            title="Dr. Lal Multi-Speciality Dental & Implant Clinic location map"
+                            src="https://www.google.com/maps?q=Dr.+Lal+Multi-Speciality+Dental+%26+Implant+Clinic,+1%2F2299+Main+Mandoli+Road,+Shahdara,+Delhi+110032&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="floating-actions" aria-label="Quick contact actions">
+        <a class="floating-action" href="tel:+919999622100" aria-label="Call Dr. Lal Dental Clinic">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 4h4l2 5-2.5 1.5a14 14 0 0 0 5 5L15 13l5 2v4c0 1.1-.9 2-2 2C10.3 21 3 13.7 3 5c0-1.1.9-2 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
             </svg>
-
-            <div class="floating-card floating-card-top">
-              <span class="floating-icon">✦</span>
-              <div>
-                <strong>Modern Care</strong>
-                <small>Comfort-focused approach</small>
-              </div>
-            </div>
-
-            <div class="floating-card floating-card-bottom">
-              <span class="floating-icon floating-icon-light">✓</span>
-              <div>
-                <strong>Implant Care</strong>
-                <small>Personalised treatment planning</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="quick-panels">
-      <div class="container quick-panel-grid">
-        <a href="services.html#implants" class="quick-panel reveal">
-          <span class="quick-panel-number">01</span>
-          <div>
-            <strong>Dental Implants</strong>
-            <span>Restorative tooth replacement</span>
-          </div>
-          <span class="panel-arrow">↗</span>
         </a>
 
-        <a href="services.html#cosmetic" class="quick-panel reveal">
-          <span class="quick-panel-number">02</span>
-          <div>
-            <strong>Cosmetic Dentistry</strong>
-            <span>Smile-focused aesthetic care</span>
-          </div>
-          <span class="panel-arrow">↗</span>
-        </a>
-
-        <a href="services.html#general" class="quick-panel reveal">
-          <span class="quick-panel-number">03</span>
-          <div>
-            <strong>General Dentistry</strong>
-            <span>Prevention & restorative care</span>
-          </div>
-          <span class="panel-arrow">↗</span>
-        </a>
-
-        <a href="contact.html" class="quick-panel reveal">
-          <span class="quick-panel-number">04</span>
-          <div>
-            <strong>Easy Appointment</strong>
-            <span>Call or WhatsApp directly</span>
-          </div>
-          <span class="panel-arrow">↗</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="section treatments-section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <span class="section-kicker">Our treatments</span>
-            <h2>Focused care for <span>every smile.</span></h2>
-          </div>
-          <div class="heading-side">
-            <p>
-              A comprehensive range of dental services delivered through a
-              thoughtful, consultation-led approach.
-            </p>
-            <a href="services.html" class="text-link">Explore all services <span>→</span></a>
-          </div>
-        </div>
-
-        <div class="treatment-grid">
-          <article class="treatment-card glass-card reveal">
-            <div class="treatment-image">
-              <svg viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg" aria-label="Dental implant illustration">
-                <defs>
-                  <linearGradient id="implantBg" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#e8faf5"/>
-                    <stop offset="100%" stop-color="#cceee7"/>
-                  </linearGradient>
-                </defs>
-                <rect width="260" height="220" rx="28" fill="url(#implantBg)"/>
-                <path d="M85 48h90l-11 64-34 25-34-25z" fill="#fff" stroke="#087f78" stroke-width="7"/>
-                <path d="M96 137l10 49h48l10-49" fill="#f7fffd" stroke="#087f78" stroke-width="7"/>
-                <path d="M104 148h52M106 161h48M109 174h42" stroke="#13a889" stroke-width="7" stroke-linecap="round"/>
-                <path d="M91 48h78" stroke="#063f43" stroke-width="12" stroke-linecap="round"/>
-              </svg>
-              <span class="treatment-tag">Restorative</span>
-            </div>
-
-            <div class="treatment-content">
-              <div class="card-topline">
-                <span>01</span>
-                <span>↗</span>
-              </div>
-              <h3>Dental Implants</h3>
-              <p>
-                Thoughtful implant planning and restorative care for missing
-                teeth, based on individual clinical needs.
-              </p>
-              <a href="services.html#implants" class="card-link">Discover treatment <span>→</span></a>
-            </div>
-          </article>
-
-          <article class="treatment-card glass-card reveal">
-            <div class="treatment-image">
-              <svg viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg" aria-label="Cosmetic dentistry illustration">
-                <defs>
-                  <linearGradient id="cosmeticBg" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#f2fbfa"/>
-                    <stop offset="100%" stop-color="#d9f1ec"/>
-                  </linearGradient>
-                </defs>
-                <rect width="260" height="220" rx="28" fill="url(#cosmeticBg)"/>
-                <path d="M54 82c25 29 54 42 76 42s51-13 76-42" fill="none" stroke="#087f78" stroke-width="10" stroke-linecap="round"/>
-                <path d="M64 95c8 66 39 90 66 90s58-24 66-90" fill="#fff" stroke="#063f43" stroke-width="7"/>
-                <path d="M89 138c17 22 65 22 82 0" fill="none" stroke="#13a889" stroke-width="8" stroke-linecap="round"/>
-                <path d="M91 112h78" stroke="#d0ece7" stroke-width="5"/>
-              </svg>
-              <span class="treatment-tag">Aesthetic</span>
-            </div>
-
-            <div class="treatment-content">
-              <div class="card-topline">
-                <span>02</span>
-                <span>↗</span>
-              </div>
-              <h3>Cosmetic Dentistry</h3>
-              <p>
-                Smile-enhancing options designed around your aesthetic goals,
-                oral health and long-term comfort.
-              </p>
-              <a href="services.html#cosmetic" class="card-link">Discover treatment <span>→</span></a>
-            </div>
-          </article>
-
-          <article class="treatment-card glass-card reveal">
-            <div class="treatment-image">
-              <svg viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg" aria-label="General dentistry illustration">
-                <defs>
-                  <linearGradient id="generalBg" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#e9faf6"/>
-                    <stop offset="100%" stop-color="#d7efea"/>
-                  </linearGradient>
-                </defs>
-                <rect width="260" height="220" rx="28" fill="url(#generalBg)"/>
-                <path d="M89 47C61 52 46 75 49 105c3 27 17 40 24 63 7 25 11 40 28 35 14-4 15-30 29-43 14 13 15 39 29 43 17 5 21-10 28-35 7-23 21-36 24-63 3-30-12-53-40-58-18-3-27 10-41 10S107 44 89 47Z" fill="#fff" stroke="#087f78" stroke-width="7"/>
-                <circle cx="102" cy="99" r="6" fill="#063f43"/>
-                <circle cx="158" cy="99" r="6" fill="#063f43"/>
-                <path d="M108 125c13 10 31 10 44 0" fill="none" stroke="#13a889" stroke-width="7" stroke-linecap="round"/>
-              </svg>
-              <span class="treatment-tag">Preventive</span>
-            </div>
-
-            <div class="treatment-content">
-              <div class="card-topline">
-                <span>03</span>
-                <span>↗</span>
-              </div>
-              <h3>General Dentistry</h3>
-              <p>
-                Routine examinations, preventive care, fillings and restorative
-                dental treatment for everyday oral health.
-              </p>
-              <a href="services.html#general" class="card-link">Discover treatment <span>→</span></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="experience-section section">
-      <div class="container experience-grid">
-        <div class="experience-copy reveal">
-          <span class="section-kicker">The Dr. Lal experience</span>
-          <h2>Dental care designed to feel <span>different.</span></h2>
-          <p>
-            From your first conversation to treatment planning and follow-up,
-            every step should feel clear, respectful and focused on you.
-          </p>
-
-          <div class="feature-list">
-            <div class="feature-item">
-              <span class="feature-icon">01</span>
-              <div>
-                <strong>Listen first</strong>
-                <p>Understand your concerns, goals and expectations before discussing options.</p>
-              </div>
-            </div>
-
-            <div class="feature-item">
-              <span class="feature-icon">02</span>
-              <div>
-                <strong>Explain clearly</strong>
-                <p>Make treatment choices easier to understand without unnecessary complexity.</p>
-              </div>
-            </div>
-
-            <div class="feature-item">
-              <span class="feature-icon">03</span>
-              <div>
-                <strong>Plan personally</strong>
-                <p>Build the next steps around your individual oral-health needs.</p>
-              </div>
-            </div>
-          </div>
-
-          <a href="about.html" class="button button-dark">Discover the clinic <span>→</span></a>
-        </div>
-
-        <div class="experience-card glass-card reveal">
-          <div class="experience-card-inner">
-            <span class="quote-mark">“</span>
-            <p>
-              Your smile is personal. Your dental care should be too.
-            </p>
-            <div class="experience-line"></div>
-            <span class="experience-label">Patient-first philosophy</span>
-          </div>
-
-          <svg class="experience-pattern" viewBox="0 0 500 500" aria-hidden="true">
-            <circle cx="250" cy="250" r="190" fill="none" stroke="#13a889" stroke-width="1"/>
-            <circle cx="250" cy="250" r="145" fill="none" stroke="#13a889" stroke-width="1"/>
-            <circle cx="250" cy="250" r="95" fill="none" stroke="#13a889" stroke-width="1"/>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <section class="stats-section">
-      <div class="container stats-grid">
-        <div class="stat-card reveal">
-          <strong data-counter="100" data-suffix="%">0%</strong>
-          <span>Patient-first approach</span>
-        </div>
-        <div class="stat-card reveal">
-          <strong data-counter="4" data-suffix="+">0+</strong>
-          <span>Core care categories</span>
-        </div>
-        <div class="stat-card reveal">
-          <strong data-counter="24" data-suffix="×7">0×7</strong>
-          <span>Direct contact access</span>
-        </div>
-        <div class="stat-card reveal">
-          <strong>Delhi</strong>
-          <span>Shahdara location</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="location-section section">
-      <div class="container location-grid">
-        <div class="location-copy glass-card reveal">
-          <span class="section-kicker">Visit the clinic</span>
-          <h2>Easy to find in <span>Shahdara.</span></h2>
-          <p>
-            Located at DDA Market, Ram Nagar, near Ravidas Gate on Main Mandoli Road.
-          </p>
-
-          <div class="address-box">
-            <span class="address-icon">⌖</span>
-            <div>
-              <strong>Clinic address</strong>
-              <p>
-                1/2299, Main Mandoli Rd, near Ravidas Gate,
-                DDA Market, Ram Nagar, Shahdara, Delhi, 110032
-              </p>
-            </div>
-          </div>
-
-          <div class="location-actions">
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Dr+Lal+Multi+Speciality+Dental+Implant+Clinic+Shahdara+Delhi"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button button-primary"
-            >
-              Get Directions <span>↗</span>
-            </a>
-            <a href="tel:+919999622100" class="button button-light">Call Clinic</a>
-          </div>
-        </div>
-
-        <div class="map-container reveal">
-          <iframe
-            title="Dr. Lal Multi-Speciality Dental & Implant Clinic location"
-            src="https://www.google.com/maps?q=1%2F2299%20Main%20Mandoli%20Rd%2C%20near%20Ravidas%20Gate%2C%20DDA%20Market%2C%20Ram%20Nagar%2C%20Shahdara%2C%20Delhi%20110032&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <div class="container cta-box reveal">
-        <div>
-          <span class="section-kicker">Ready when you are</span>
-          <h2>Let's take care of your smile.</h2>
-          <p>Call the clinic or send an appointment request through WhatsApp.</p>
-        </div>
-
-        <div class="cta-actions">
-          <a href="tel:+919999622100" class="button button-white">☎ Call +91 99996 22100</a>
-          <a href="https://wa.me/919999622100" target="_blank" rel="noopener noreferrer" class="button button-whatsapp">WhatsApp Us ↗</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div class="floating-actions" aria-label="Quick contact actions">
-    <a href="tel:+919999622100" class="floating-phone" aria-label="Call clinic">☎</a>
-    <a href="https://wa.me/919999622100" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="WhatsApp clinic">☘</a>
-  </div>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="brand footer-brand-link">
-          <span class="brand-icon">
-            <svg viewBox="0 0 48 48" aria-hidden="true">
-              <path d="M24 6c-5.2 0-8.3 3.2-12.2 3.2C7.4 9.2 4 13 4 18.3c0 6.8 4.3 10.2 5.4 16.2C10.7 41 14 44 18 40.6c2.8-2.4 2.4-7.8 6-7.8s3.2 5.4 6 7.8c4 3.4 7.3.4 8.6-6.1C39.7 28.5 44 25.1 44 18.3 44 13 40.6 9.2 36.2 9.2 32.3 9.2 29.2 6 24 6Z"/>
-              <path d="M24 13v14M17 20h14"/>
+        <a class="floating-action whatsapp" href="https://wa.me/919999622100" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 11.5a8 8 0 0 1-11.8 7.1L4 20l1.4-4A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M9 8.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c.6 1 1.4 1.8 2.5 2.3l.6-.7c.1-.2.4-.2.6-.1l1.7.8c.2.1.3.3.2.5-.2.8-.8 1.3-1.6 1.3-2.1-.1-5.9-3.1-6.5-5.9-.2-.4-.1-.8.1-1.1Z" fill="currentColor"/>
             </svg>
-          </span>
-          <span class="brand-copy">
-            <strong>Dr. Lal Dental</strong>
-            <small>Multi-Speciality & Implant Clinic</small>
-          </span>
         </a>
-        <p>
-          Patient-focused dental care with a modern, comfortable approach in Shahdara, Delhi.
-        </p>
-      </div>
-
-      <div class="footer-column">
-        <h3>Explore</h3>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Clinic</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Appointments</a>
-      </div>
-
-      <div class="footer-column">
-        <h3>Contact</h3>
-        <a href="tel:+919999622100">+91 99996 22100</a>
-        <a href="mailto:drlal.dc@gmail.com">drlal.dc@gmail.com</a>
-        <span>Shahdara, Delhi 110032</span>
-      </div>
     </div>
 
-    <div class="container footer-bottom">
-      <span>© <span id="currentYear">2026</span> Dr. Lal Multi-Speciality Dental & Implant Clinic.</span>
-      <span>Dental care with clarity & care.</span>
-    </div>
-  </footer>
-
-  <script src="js/app.js"></script>
+    <script src="js/app.js" defer></script>
 </body>
 </html>
